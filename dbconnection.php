@@ -1,11 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "login_register";
+$dbHost = getenv('DB_HOST');
+$dbUser = getenv('DB_USER');
+$dbPass = getenv('DB_PASSWORD');
+$dbName = getenv('DB_NAME');
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
 // Check connection
 if ($conn->connect_error) {
